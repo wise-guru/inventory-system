@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="512.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifyProductController">
+    <children>
+        <AnchorPane layoutX="8.0" layoutY="14.0" prefHeight="485.0" prefWidth="1005.0" style="-fx-border-radius: 5; -fx-border-color: black;">
+            <children>
+                <Label layoutX="24.0" layoutY="26.0" text="Modify Product" />
+                <!--            <RadioButton layoutX="128.0" layoutY="25.0" mnemonicParsing="false" text="In-House" />-->
+                <!--            <RadioButton layoutX="261.0" layoutY="25.0" mnemonicParsing="false" text="Outsourced" />-->
+                <Label layoutX="36.0" layoutY="118.0" text="ID" />
+                <Label layoutX="23.0" layoutY="162.0" text="Name" />
+                <Label layoutX="25.0" layoutY="200.0" text="Inv" />
+                <Label layoutX="19.0" layoutY="252.0" text="Price/Cost" />
+                <Label layoutX="22.0" layoutY="290.0" text="Max" />
+                <TextField fx:id="ModifyProductId" editable="false" layoutX="140.0" layoutY="114.0" />
+                <TextField fx:id="ModifyProductName" layoutX="140.0" layoutY="158.0" />
+                <TextField fx:id="ModifyProductInv" layoutX="140.0" layoutY="204.0" />
+                <TextField fx:id="ModifyProductPriceCost" layoutX="140.0" layoutY="248.0" />
+                <TextField fx:id="ModifyProductMax" layoutX="140.0" layoutY="286.0" prefHeight="24.0" prefWidth="83.0" />
+                <Label layoutX="237.0" layoutY="290.0" text="Min" />
+                <TextField fx:id="ModifyProductMin" layoutX="276.0" layoutY="286.0" prefHeight="24.0" prefWidth="83.0" />
+                <Button fx:id="ModifyProductSave" layoutX="853.0" layoutY="445.0" mnemonicParsing="false" onAction="#OnSaveButtonClick" text="Save" />
+                <Button fx:id="ModifyProductCancelButton" layoutX="922.0" layoutY="445.0" mnemonicParsing="false" onAction="#OnCancelButtonClick" text="Cancel" />
+                <Button fx:id="ModifyProductSearchButton" layoutX="555.0" layoutY="22.0" mnemonicParsing="false" onAction="#OnSearchButtonClick" text="Search" />
+                <TextField fx:id="ModifyProductSearchField" layoutX="637.0" layoutY="22.0" />
+                <TableView fx:id="ModifyAddPartsTableView" layoutX="366.0" layoutY="70.0" prefHeight="140.0" prefWidth="507.0">
+                    <columns>
+                        <TableColumn fx:id="ModifyAddPartIdCol" prefWidth="75.0" text="Part ID" />
+                        <TableColumn fx:id="ModifyAddPartNameCol" prefWidth="126.0" text="Part Name" />
+                        <TableColumn fx:id="ModifyAddPartInvCol" prefWidth="155.0" text="Inventory Level" />
+                        <TableColumn fx:id="ModifyAddPartPriceCol" prefWidth="150.0" text="Price Per Unit" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="AssociatedPartsTableView" layoutX="365.0" layoutY="248.0" prefHeight="140.0" prefWidth="507.0">
+                    <columns>
+                        <TableColumn fx:id="AssociatedPartIdCol" prefWidth="75.0" text="Part ID" />
+                        <TableColumn fx:id="AssociatedPartNameCol" prefWidth="126.0" text="Part Name" />
+                        <TableColumn fx:id="AssociatedPartInvCol" prefWidth="155.0" text="Inventory Level" />
+                        <TableColumn fx:id="AssociatedPartPriceCol" prefWidth="150.0" text="Price Per Unit" />
+                    </columns>
+                </TableView>
+                <Button fx:id="ModifyProductAdd" layoutX="797.0" layoutY="218.0" mnemonicParsing="false" onAction="#OnAddButtonClick" text="Add" />
+                <Button fx:id="ModifyProdictDelete" layoutX="810.0" layoutY="400.0" mnemonicParsing="false" onAction="#OnDeleteButtonClick" text="Delete" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
